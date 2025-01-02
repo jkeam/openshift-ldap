@@ -36,7 +36,12 @@ and add the ldap identity provider as reflected in `./users/oauth.yaml`.
 
 #### Groups
 
+This will create groups into OpenShift as well as pull
+in the users found in those LDAP groups.
+
+```shell
 oc adm groups sync --sync-config=./groups/group-config.yaml --confirm
+```
 
 ## Removing
 
