@@ -40,7 +40,8 @@ oc adm groups sync --sync-config=./groups/group-config.yaml --confirm
 
 ## Links
 
-1. [OpenShift Docs](https://docs.openshift.com/container-platform/4.17/authentication/identity_providers/configuring-ldap-identity-provider.html#identity-provider-ldap-CR_configuring-ldap-identity-provider)
-2. [JumpCloud Docs](https://jumpcloud.com/support/use-cloud-ldap)
-3. [JumpCloud Certs Doc](https://jumpcloud.com/support/connect-to-ldap-with-tls-ssl)
-4. [JumpCloud LDAP Tester](https://github.com/TheJumpCloud/support/blob/master/scripts/jumpcloud_test_utility.sh)
+1. [OpenShift Docs for LDAP IP](https://docs.openshift.com/container-platform/4.17/authentication/identity_providers/configuring-ldap-identity-provider.html#identity-provider-ldap-CR_configuring-ldap-identity-provider)
+2. [OpenShift Docs for LDAP Group Sync](https://docs.openshift.com/container-platform/4.17/authentication/ldap-syncing.html)
+3. [JumpCloud Docs](https://jumpcloud.com/support/use-cloud-ldap)
+4. [JumpCloud Certs Doc](https://jumpcloud.com/support/connect-to-ldap-with-tls-ssl)
+5. [JumpCloud LDAP Tester](https://github.com/TheJumpCloud/support/blob/master/scripts/jumpcloud_test_utility.sh)
