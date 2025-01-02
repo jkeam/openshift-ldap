@@ -44,11 +44,11 @@ If you want to undo/delete all that you've done, make sure to:
 
 1. Delete any users/groups/[identities](https://github.com/openshift/origin/issues/14506) created by this process
 2. Remove all associated secrets/configmaps
-3. Remove provider from oauth/cluster
+3. Remove identity provider from oauth/cluster
 
 ## Links
 
-1. [OpenShift Docs for LDAP IP](https://docs.openshift.com/container-platform/4.17/authentication/identity_providers/configuring-ldap-identity-provider.html#identity-provider-ldap-CR_configuring-ldap-identity-provider)
+1. [OpenShift Docs for LDAP Identity Provider](https://docs.openshift.com/container-platform/4.17/authentication/identity_providers/configuring-ldap-identity-provider.html#identity-provider-ldap-CR_configuring-ldap-identity-provider)
 2. [OpenShift Docs for LDAP Group Sync](https://docs.openshift.com/container-platform/4.17/authentication/ldap-syncing.html)
 3. [JumpCloud Docs](https://jumpcloud.com/support/use-cloud-ldap)
 4. [JumpCloud Certs Doc](https://jumpcloud.com/support/connect-to-ldap-with-tls-ssl)
