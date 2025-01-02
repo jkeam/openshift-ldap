@@ -1,0 +1,27 @@
+kind: LDAPSyncConfig
+apiVersion: v1
+url: "ldaps://ldap.jumpcloud.com:636"
+insecure: false
+bindDN: "uid=ldapbinduser,ou=Users,o=60nkh1szatnktw9t5qfrmpt1,dc=jumpcloud,dc=com"
+bindPassword:
+  value: "thisisafakepassword"
+rfc2307:
+  groupsQuery:
+    baseDN: "ou=Users,o=60nkh1szatnktw9t5qfrmpt1,dc=jumpcloud,dc=com"
+    scope: sub
+    filter: "(objectClass=posixGroup)"
+    derefAliases: never
+    pageSize: 0
+  groupUIDAttribute: cn
+  groupNameAttributes: [ cn ]
+  groupMembershipAttributes: [ memberUid ]
+  usersQuery:
+    baseDN: "ou=Users,o=60nkh1szatnktw9t5qfrmpt1,dc=jumpcloud,dc=com"
+    scope: sub
+    filter: "(objectClass=inetOrgPerson)"
+    derefAliases: never
+    pageSize: 0
+  userUIDAttribute: uid
+  userNameAttributes: [ uid ]
+  tolerateMemberNotFoundErrors: false
+  tolerateMemberOutOfScopeErrors: false

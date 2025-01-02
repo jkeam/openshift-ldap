@@ -8,28 +8,35 @@ OpenShift LDAP Example.  All values in the `yaml` are fake and for example only.
 
 Update fake values in the following files:
 
-1. `./openshift/secret.yaml` to reflect password for ldap service account user
-2. `./openshift/config-map.yaml` to reflect entire cert chain for ldap server
-3. `./openshift/oauth.yaml` to reflect ldap attributes, bindDN, and url
+1. `./users/secret.yaml` to reflect password for ldap service account user
+2. `./users/config-map.yaml` to reflect entire cert chain for ldap server
+3. `./users/oauth.yaml` to reflect ldap attributes, bindDN, and url
+4. `./groups/group-config.yaml` to reflect ldap attributes, bindDN, password, and url
 
 ### Applying
+
+#### Auth Provider
 
 Create resources used by LDAP identity provider (secret and configmap)
 and then add the LDAP identity provider
 
 ```shell
-oc apply -k ./openshift
+oc apply -k ./users
 ```
 
 or
 
 ```shell
-oc apply -f ./openshift/secret.yaml
-oc apply -f ./openshift/config-map.yaml
+oc apply -f ./users/secret.yaml
+oc apply -f ./users/config-map.yaml
 oc edit oauth/cluster
 ```
 
-and add the ldap identity provider as reflected in `./openshift/oauth.yaml`.
+and add the ldap identity provider as reflected in `./users/oauth.yaml`.
+
+#### Groups
+
+oc adm groups sync --sync-config=./groups/group-config.yaml --confirm
 
 ## Links
 
